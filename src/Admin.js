@@ -33,7 +33,9 @@ const Admin = () => {
   };
 
   const handleLogout = async () => {
-    await axios.post("http://localhost:3000/api/logout");
+    await axios.post(
+      "https://backend-perpus-pcc-class-production.up.railway.app/api/logout"
+    );
     navigate("/web-perpus-pcc-class/login");
   };
 
