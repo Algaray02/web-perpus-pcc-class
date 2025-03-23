@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/web-perpus-pcc-class/static/css/main.a386a2b4.css",
+    "main.js": "/web-perpus-pcc-class/static/js/main.18dff6e7.js",
+    "static/js/453.c079d1f8.chunk.js": "/web-perpus-pcc-class/static/js/453.c079d1f8.chunk.js",
+    "static/media/header.webp": "/web-perpus-pcc-class/static/media/header.06bfe5014be4e1283e6a.webp",
+    "index.html": "/web-perpus-pcc-class/index.html",
+    "main.a386a2b4.css.map": "/web-perpus-pcc-class/static/css/main.a386a2b4.css.map",
+    "main.18dff6e7.js.map": "/web-perpus-pcc-class/static/js/main.18dff6e7.js.map",
+    "453.c079d1f8.chunk.js.map": "/web-perpus-pcc-class/static/js/453.c079d1f8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a386a2b4.css",
+    "static/js/main.18dff6e7.js"
+  ]
+}
