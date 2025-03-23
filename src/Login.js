@@ -11,10 +11,13 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault(); // Pastikan ini ada
     try {
-      const response = await axios.post("http://localhost:3000/api/login", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://backend-perpus-pcc-class-production.up.railway.app/api/login",
+        {
+          username,
+          password,
+        }
+      );
       if (response.data.success) {
         navigate("/web-perpus-pcc-class/admin");
       }
