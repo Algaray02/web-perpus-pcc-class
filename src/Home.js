@@ -420,7 +420,7 @@ const Home = () => {
                       className="w-full h-full object-contain bg-gray-100 hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                  <div className="mt-2">
+                  <div className="mt-4 text-center">
                     <Link to="#" className="block">
                       <span className="text-white font-medium">
                         {book.judul}
