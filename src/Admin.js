@@ -34,7 +34,7 @@ const Admin = () => {
 
   const handleLogout = async () => {
     await axios.post("http://localhost:3000/api/logout");
-    navigate("/login");
+    navigate("/web-perpus-pcc-class/login");
   };
 
   const deleteBook = async (id) => {

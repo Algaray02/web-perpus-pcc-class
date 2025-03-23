@@ -185,7 +185,7 @@ const Home = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link
-              to="/"
+              to="/web-perpus-pcc-class/"
               className="text-2xl font-bold text-emerald-600 font-montserrat ml-8 md:ml-4"
             >
               Pudigii📚
@@ -199,7 +199,7 @@ const Home = () => {
             >
               <li>
                 <a
-                  href="/"
+                  href="/web-perpus-pcc-class/"
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection("beranda");
@@ -269,7 +269,7 @@ const Home = () => {
               </li>
               <li>
                 <Link
-                  to="/login"
+                  to="/web-perpus-pcc-class/login"
                   className="bg-emerald-600 text-white px-5 py-2 rounded-md hover:bg-emerald-700"
                 >
                   Login

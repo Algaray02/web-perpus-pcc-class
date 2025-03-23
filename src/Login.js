@@ -16,7 +16,7 @@ const Login = () => {
         password,
       });
       if (response.data.success) {
-        navigate("/admin");
+        navigate("/web-perpus-pcc-class/admin");
       }
     } catch (error) {
       alert("Username atau password salah");
@@ -69,7 +69,7 @@ const Login = () => {
             Login
           </button>
           <a
-            href="/"
+            href="/web-perpus-pcc-class/"
             className="block text-center mt-4 text-emerald-600 hover:text-emerald-700 transition-colors text-sm hover:underline"
           >
             Kembali

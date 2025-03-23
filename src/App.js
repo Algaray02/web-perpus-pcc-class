@@ -9,10 +9,10 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/web-perpus-pcc-class/" element={<Home />} />
+        <Route path="/web-perpus-pcc-class/login" element={<Login />} />
+        <Route path="/web-perpus-pcc-class/admin" element={<Admin />} />
+        <Route path="/web-perpus-pcc-class/*" element={<NotFound />} />
       </Routes>
     </Router>
   );
