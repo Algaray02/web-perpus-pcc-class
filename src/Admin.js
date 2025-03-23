@@ -23,7 +23,9 @@ const Admin = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/books");
+      const response = await axios.get(
+        "http://backend-perpus-pcc-class-production.up.railway.app/api/books"
+      );
       setBooks(response.data.data);
     } catch (error) {
       console.error("Gagal mengambil data buku:", error);
@@ -37,7 +39,9 @@ const Admin = () => {
 
   const deleteBook = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/books/${id}`);
+      await axios.delete(
+        `http://backend-perpus-pcc-class-production.up.railway.app/api/books/${id}`
+      );
       fetchBooks();
     } catch (error) {
       console.error("Gagal menghapus buku:", error);
@@ -55,7 +59,7 @@ const Admin = () => {
 
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/upload-image",
+          "http://backend-perpus-pcc-class-production.up.railway.app/api/upload-image",
           formData,
           {
             headers: {
@@ -94,7 +98,10 @@ const Admin = () => {
         imgUrl: uploadedImgUrl,
       };
 
-      await axios.post("http://localhost:3000/api/books", bookData);
+      await axios.post(
+        "http://backend-perpus-pcc-class-production.up.railway.app/api/books",
+        bookData
+      );
       setNewBook({
         judul: "",
         penulis: "",
@@ -129,7 +136,7 @@ const Admin = () => {
       };
 
       await axios.put(
-        `http://localhost:3000/api/books/${editBook.id}`,
+        `http://backend-perpus-pcc-class-production.up.railway.app/api/books/${editBook.id}`,
         bookData
       );
       setEditBook(null);
@@ -271,7 +278,7 @@ const Admin = () => {
             className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             <img
-              src={`http://localhost:3000/images/books/${book.imgUrl}`}
+              src={`http://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
               alt={book.judul}
               className="w-full h-48 object-contain rounded-md mb-4"
             />
