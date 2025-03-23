@@ -117,7 +117,7 @@ const Home = () => {
     const fetchBooks = async () => {
       try {
         const response = await fetch(
-          "http://backend-perpus-pcc-class-production.up.railway.app/api/books"
+          "https://backend-perpus-pcc-class-production.up.railway.app/api/books"
         );
         const result = await response.json();
         if (result.success) {
@@ -138,7 +138,7 @@ const Home = () => {
     if (query) {
       try {
         const response = await fetch(
-          `http://backend-perpus-pcc-class-production.up.railway.app/api/books/search?query=${encodeURIComponent(
+          `https://backend-perpus-pcc-class-production.up.railway.app/api/books/search?query=${encodeURIComponent(
             query
           )}`
         );
@@ -344,7 +344,7 @@ const Home = () => {
                 >
                   <div className="relative h-72 rounded-lg overflow-hidden">
                     <img
-                      src={`http://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
+                      src={`https://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
                       alt={book.judul}
                       className="w-full h-full object-contain bg-gray-100 hover:scale-110 transition-transform duration-500"
                     />
@@ -415,7 +415,7 @@ const Home = () => {
                 >
                   <div className="relative h-72 rounded-lg overflow-hidden">
                     <img
-                      src={`http://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
+                      src={`https://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
                       alt={book.judul}
                       className="w-full h-full object-contain bg-gray-100 hover:scale-110 transition-transform duration-500"
                     />
@@ -460,7 +460,7 @@ const Home = () => {
               >
                 <div className="p-4">
                   <img
-                    src={`http://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
+                    src={`https://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
                     alt={book.judul}
                     className="w-full h-48 object-contain"
                   />
@@ -629,7 +629,7 @@ const Home = () => {
                 <div className="flex gap-6">
                   <div className="w-48 h-72 rounded-lg overflow-hidden bg-gray-100">
                     <img
-                      src={`http://backend-perpus-pcc-class-production.up.railway.app/images/books/${selectedBook.imgUrl}`}
+                      src={`https://backend-perpus-pcc-class-production.up.railway.app/images/books/${selectedBook.imgUrl}`}
                       alt={selectedBook.judul}
                       className="w-full h-full object-contain"
                     />
@@ -654,7 +654,7 @@ const Home = () => {
                   <div key={book.id} className="flex gap-6 mb-6">
                     <div className="w-48 h-72 rounded-lg overflow-hidden bg-gray-100">
                       <img
-                        src={`http://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
+                        src={`https://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
                         alt={book.judul}
                         className="w-full h-full object-contain"
                       />

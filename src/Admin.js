@@ -24,7 +24,7 @@ const Admin = () => {
   const fetchBooks = async () => {
     try {
       const response = await axios.get(
-        "http://backend-perpus-pcc-class-production.up.railway.app/api/books"
+        "https://backend-perpus-pcc-class-production.up.railway.app/api/books"
       );
       setBooks(response.data.data);
     } catch (error) {
@@ -40,7 +40,7 @@ const Admin = () => {
   const deleteBook = async (id) => {
     try {
       await axios.delete(
-        `http://backend-perpus-pcc-class-production.up.railway.app/api/books/${id}`
+        `https://backend-perpus-pcc-class-production.up.railway.app/api/books/${id}`
       );
       fetchBooks();
     } catch (error) {
@@ -59,7 +59,7 @@ const Admin = () => {
 
       try {
         const response = await axios.post(
-          "http://backend-perpus-pcc-class-production.up.railway.app/api/upload-image",
+          "https://backend-perpus-pcc-class-production.up.railway.app/api/upload-image",
           formData,
           {
             headers: {
@@ -99,7 +99,7 @@ const Admin = () => {
       };
 
       await axios.post(
-        "http://backend-perpus-pcc-class-production.up.railway.app/api/books",
+        "https://backend-perpus-pcc-class-production.up.railway.app/api/books",
         bookData
       );
       setNewBook({
@@ -136,7 +136,7 @@ const Admin = () => {
       };
 
       await axios.put(
-        `http://backend-perpus-pcc-class-production.up.railway.app/api/books/${editBook.id}`,
+        `https://backend-perpus-pcc-class-production.up.railway.app/api/books/${editBook.id}`,
         bookData
       );
       setEditBook(null);
@@ -278,7 +278,7 @@ const Admin = () => {
             className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             <img
-              src={`http://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
+              src={`https://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
               alt={book.judul}
               className="w-full h-48 object-contain rounded-md mb-4"
             />
