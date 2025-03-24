@@ -62,3 +62,20 @@ body {
 #footer {
   animation-delay: 0.2s;
 }
+
+/* Animasi slide-down */
+@keyframes slideDown {
+  from {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Class untuk animasi slide-down */
+.slide-down {
+  animation: slideDown 0.3s ease-in-out forwards;
+}

@@ -18,25 +18,14 @@ const Home = () => {
   useEffect(() => {
     let lastScrollY = window.scrollY; // Simpan posisi scroll sebelumnya
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const currentScrollY = window.scrollY;
-
-            // Cek apakah scroll ke bawah
-            if (currentScrollY > lastScrollY) {
-              entry.target.classList.add("fade-in");
-            }
-
-            lastScrollY = currentScrollY; // Update posisi scroll terakhir
-          }
-        });
-      },
-      {
-        threshold: 0.5,
-      }
-    );
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+          lastScrollY = window.scrollY; // Update posisi scroll terakhir
+        }
+      });
+    });
 
     const sections = sectionsRef.current;
     sections.forEach((section) => {
@@ -47,6 +36,20 @@ const Home = () => {
       sections.forEach((section) => {
         if (section) observer.unobserve(section);
       });
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMenuActive(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -181,7 +184,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <nav className="sticky top-0 z-10 bg-gray-100 shadow-md justify-between items-center">
+      <nav className="sticky mx-auto flex top-0 z-10 bg-gray-100 shadow-md justify-between items-center">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link
@@ -191,11 +194,11 @@ const Home = () => {
               Pudigii📚
             </Link>
             <ul
-              className={`hidden md:flex space-x-6 items-center ${
+              className={`${
                 isMenuActive
-                  ? "flex flex-col absolute top-16 right-0 w-full bg-gray-100"
-                  : ""
-              }`}
+                  ? "flex flex-col absolute top-16 z-9 right-0 w-full bg-gray-100 slide-down"
+                  : "hidden"
+              } md:flex md:space-x-8 space-y-3 md:space-y-0 items-center md:mt-0 md:flex-row flex-col p-6 md:p-0`}
             >
               <li>
                 <a
