@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/web-perpus-pcc-class/static/css/main.ff43637b.css",
-    "main.js": "/web-perpus-pcc-class/static/js/main.f6916f40.js",
+    "main.css": "/web-perpus-pcc-class/static/css/main.6d7b2482.css",
+    "main.js": "/web-perpus-pcc-class/static/js/main.42759f72.js",
     "static/js/453.c079d1f8.chunk.js": "/web-perpus-pcc-class/static/js/453.c079d1f8.chunk.js",
     "static/media/header.webp": "/web-perpus-pcc-class/static/media/header.06bfe5014be4e1283e6a.webp",
     "index.html": "/web-perpus-pcc-class/index.html",
-    "main.ff43637b.css.map": "/web-perpus-pcc-class/static/css/main.ff43637b.css.map",
-    "main.f6916f40.js.map": "/web-perpus-pcc-class/static/js/main.f6916f40.js.map",
+    "main.6d7b2482.css.map": "/web-perpus-pcc-class/static/css/main.6d7b2482.css.map",
+    "main.42759f72.js.map": "/web-perpus-pcc-class/static/js/main.42759f72.js.map",
     "453.c079d1f8.chunk.js.map": "/web-perpus-pcc-class/static/js/453.c079d1f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff43637b.css",
-    "static/js/main.f6916f40.js"
+    "static/css/main.6d7b2482.css",
+    "static/js/main.42759f72.js"
   ]
 }
