@@ -290,7 +290,7 @@ const Home = () => {
         <section
           id="beranda"
           ref={(el) => (sectionsRef.current[0] = el)}
-          className="grid md:grid-cols-2 gap-8 items-center py-12 px-4 pt-20 pb-80 opacity-100 transition-opacity duration-500"
+          className="grid md:grid-cols-2 gap-8 items-center py-12 px-4 pt-20 pb-96 md:pb-40 opacity-100 transition-opacity duration-500"
         >
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-bold text-emerald-600 mb-4">

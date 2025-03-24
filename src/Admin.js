@@ -289,16 +289,16 @@ const Admin = () => {
             <div className="text-yellow-400">
               {"⭐".repeat(book.rating)} ({book.rating})
             </div>
-            <div className="flex mt-4">
+            <div className="flex mt-4 flex-col sm:flex-row gap-2">
               <button
                 onClick={() => setEditBook(book)}
-                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 mr-2"
+                className="w-full sm:w-auto bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
               >
                 Edit
               </button>
               <button
                 onClick={() => deleteBook(book.id)}
-                className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
+                className="w-full sm:w-auto bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
               >
                 Hapus
               </button>
