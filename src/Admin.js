@@ -24,7 +24,7 @@ const Admin = () => {
   const fetchBooks = async () => {
     try {
       const response = await axios.get(
-        "https://backend-perpus-pcc-class-production.up.railway.app/api/books"
+        "https://vhxmbqg0-8080.asse.devtunnels.ms/api/books"
       );
       setBooks(response.data.data);
     } catch (error) {
@@ -33,16 +33,14 @@ const Admin = () => {
   };
 
   const handleLogout = async () => {
-    await axios.post(
-      "https://backend-perpus-pcc-class-production.up.railway.app/api/logout"
-    );
+    await axios.post("https://vhxmbqg0-8080.asse.devtunnels.ms/api/logout");
     navigate("/web-perpus-pcc-class/login");
   };
 
   const deleteBook = async (id) => {
     try {
       await axios.delete(
-        `https://backend-perpus-pcc-class-production.up.railway.app/api/books/${id}`
+        `https://vhxmbqg0-8080.asse.devtunnels.ms/api/books/${id}`
       );
       fetchBooks();
     } catch (error) {
@@ -61,7 +59,7 @@ const Admin = () => {
 
       try {
         const response = await axios.post(
-          "https://backend-perpus-pcc-class-production.up.railway.app/api/upload-image",
+          "https://vhxmbqg0-8080.asse.devtunnels.ms/api/upload-image",
           formData,
           {
             headers: {
@@ -101,7 +99,7 @@ const Admin = () => {
       };
 
       await axios.post(
-        "https://backend-perpus-pcc-class-production.up.railway.app/api/books",
+        "https://vhxmbqg0-8080.asse.devtunnels.ms/api/books",
         bookData
       );
       setNewBook({
@@ -138,7 +136,7 @@ const Admin = () => {
       };
 
       await axios.put(
-        `https://backend-perpus-pcc-class-production.up.railway.app/api/books/${editBook.id}`,
+        `https://vhxmbqg0-8080.asse.devtunnels.ms/api/books/${editBook.id}`,
         bookData
       );
       setEditBook(null);
@@ -282,7 +280,7 @@ const Admin = () => {
             className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
           >
             <img
-              src={`https://backend-perpus-pcc-class-production.up.railway.app/images/books/${book.imgUrl}`}
+              src={`https://vhxmbqg0-8080.asse.devtunnels.ms/images/books/${book.imgUrl}`}
               alt={book.judul}
               className="w-full h-48 object-contain rounded-md mb-4"
             />
